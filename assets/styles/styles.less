@@ -1,0 +1,234 @@
+
+//
+// !!!
+//
+
+// Import
+@import 'vendor/reset';
+@import 'less/variables';
+@import 'less/mixin';
+@import 'less/grid';
+@import 'less/type';
+
+
+
+// Меняем блочную модель
+* {
+    .box-sizing (border-box);
+  }
+
+  *:before,
+  *:after {
+    .box-sizing (border-box);
+  }
+
+// Ссылки
+a {
+  color: @color-link;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+  .transition;    
+  }
+
+  &:active {
+  .opacity;
+  .transition;  
+  }
+}
+
+
+// Body
+body {
+  font-family: @font-family-sans-serif;
+  font-size: 85%;
+  line-height: @line-height;
+  color: @color-text;
+  background-color: @color-body;
+  .hyphens;
+
+   @media screen and (min-width: @tablet) {  
+       font-size: @font-size;
+    }
+}
+
+// Header
+.header {
+  background: @color-bg url(../img/asfalt_@2X.png) 0 0 repeat;
+  text-align: center;
+  color: @color-link;
+  padding: 30px 0;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: @tablet) {  
+    padding: 70px 0;
+    margin-bottom: 70px;
+    position: relative;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 9px;
+    background: transparent url(../img/zubr.png) 0 0 repeat-x;
+    position: absolute;
+    bottom: 0;
+    left: 0;    
+  }
+
+  &__logo {    
+    text-transform: uppercase;
+    font-family: 'Bebasneue';
+    font-size: 20px;
+
+     @media screen and (min-width: @tablet) {  
+       font-size: 40px;
+    }
+  }
+
+  &__title {
+    color: @color-body;   
+    line-height: 1.2;
+    text-transform: uppercase;
+    font-family: 'Bebasneue';
+    font-size: 40px;
+    
+    @media screen and (min-width: @tablet) {  
+       font-size: 80px;
+    }
+  }
+
+  &__phone {   
+    text-transform: uppercase;
+    font-family: 'Bebasneue';
+    font-size: 40px;
+
+     @media screen and (min-width: @tablet) {  
+       font-size: 80px;
+    }
+  }
+
+  &__share {
+    margin-top: 15px;
+
+    @media screen and (min-width: @tablet) {  
+    position: absolute;
+    right: 5%;
+    bottom: 0;
+    }
+  }
+}
+
+// Content
+
+.post {
+  
+  &__title {
+    font-family: "Times New Roman", Times, Baskerville, Georgia, serif;
+    font-size: 30px;
+    font-style: italic;
+
+     @media screen and (min-width: @tablet) {  
+       font-size: 60px;
+    }
+  }  
+
+  &__img {
+    padding-top: 15px;
+    margin-bottom: 30px;
+    text-align: center;
+    
+    @media screen and (min-width: @tablet) {  
+      margin-bottom: 40px;
+      text-align: left;
+
+    }
+
+    img {
+      border-radius: 5px;
+      margin-right: 5%;
+    }
+  }
+
+  &__end {
+    @media screen and (max-width: @tablet) {  
+    margin-bottom: 30px;
+    }
+  }
+}
+
+// Aside
+.wiget {
+  margin-bottom: 30px;
+  
+  @media screen and (min-width: @tablet) {  
+    margin-bottom: 70px;
+  }
+  
+  &:last-child {
+    margin-bottom: 0;
+  }  
+
+  &__title {   
+    padding-bottom: 10px;
+    font-weight: 400;
+  }
+
+  img {
+    margin-bottom: 15px;
+  }
+}
+
+// Footer
+.footer {
+  text-align: center;
+  background: @color-bg url(../img/asfalt_@2X.png) 0 0 repeat; 
+  position: relative;
+  margin-top: 30px;
+
+  @media screen and (min-width: @tablet) {  
+    margin-top: 70px;
+  }
+
+  &:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 9px;
+    background: transparent url(../img/zubr.png) 0 -9px repeat-x;
+    position: absolute;
+    top: 0;
+    left: 0;    
+  }
+
+  h2 {
+    padding: 40px 0;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-family: 'Bebasneue';
+    line-height: 1.2;
+    color: @color-body;
+
+     @media screen and (min-width: @tablet) {  
+       font-size: 50px;
+    }
+  }
+}
+
+
+// Plugins
+.fotorama__dot {    
+    height: 10px !important;   
+    width: 10px !important;
+
+    .fotorama__active & {
+      border-color: @color-link !important;
+      border-width: 1px !important;
+    }
+}
+
+
+
+

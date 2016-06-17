@@ -1,0 +1,36 @@
+
+//
+// !!!
+//
+
+.wrapper {
+  max-width: @content-width;
+  margin: 0 auto;
+  padding: 0 5%;
+  position: relative;
+  .cf;
+
+}
+
+.floater {
+  float: left;
+  position: relative;
+}
+
+@media screen and (min-width: @tablet) {  
+  .secondary {
+    width: 35%;
+    right: 60%;
+    .floater;
+  }
+
+  .primary {
+    width: 60%;
+    //margin-right: 5%;
+    left: 40%;
+    .floater;
+  }
+
+}
+
+
